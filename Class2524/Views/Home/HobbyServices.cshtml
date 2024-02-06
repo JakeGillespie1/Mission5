@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Hobby Services";
+}
+<h1 style="text-align: center">@ViewData["Title"]</h1>
+<br><br>
+<div style="text-align: left">
+<h3>Hobby Services Calculator</h3>
+<form>
+    <!--Number of Hours the Client would like-->
+    <label for="numHours">Time Needed from Jake</label>
+    <input type="number" min="0" id="numHours" style="width:auto" onkeydown="return false" placeholder="Number of Hours"/>
+    <br><br>
+    <!--Hourly rate for Jake's services-->
+    <label for="numHourRate">Jake's hourly rate</label>
+    <input type="number" readonly="readonly" min="0" id="numHourRate" style="width:fit-content" placeholder="$10/hr"/>
+    
+    <br><br>
+    <!--Total rate calcualation for Jake's services-->
+    <button type="button" class="btn btn-primary" onclick="getPay();" id="calculateButton">Calculate Price of Services</button>
+    
+    <br><br>
+    <!--Display total rate calcualation for Jake's services-->
+    <input type="text" readonly="readonly" id="numTotalCost" value="" style="display:none" />
+</form>
+</div>
